@@ -24,8 +24,9 @@ public class Blackjack {
 		int betAmount = console.nextInt();
 		
 		
-		spaceConsole();
+		//spaceConsole();
 		Thread.sleep(250);
+		
 		System.out.println("-------Round-1-------");
 		Thread.sleep(250);
 		
@@ -44,16 +45,17 @@ public class Blackjack {
 			if (console.nextLine().equalsIgnoreCase("hit")) {
 				Thread.sleep(250);
 				hand.add(cards.drawCard());
-				System.out.println("Dealer gives you a " + hand.get(2));
+				System.out.println("Dealer gives you a " + hand.get(hand.size()-1));
 				Thread.sleep(250);
 				System.out.println("Total: " + findTotalValue(hand));
+				System.out.println("Type 'Hit' to draw a card, Type 'Stand' to move on.");
 			}
-			spaceConsole();
+			//spaceConsole();
 		}
 		System.out.println("Bust! you Lose!");
 		Thread.sleep(250);
-		System.out.println("-" + betAmount);
-		
+		System.out.println("lost " + betAmount + " dollars.");
+		 
 		
 	}
 	
